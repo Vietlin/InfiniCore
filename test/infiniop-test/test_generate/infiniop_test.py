@@ -3,13 +3,13 @@ from typing import List
 import gguf
 import numpy as np
 from gguf import GGMLQuantizationType
-from ml_dtypes import bfloat16
+#from ml_dtypes import bfloat16
 
 
 def np_dtype_to_ggml(tensor_dtype: np.dtype):
-    if tensor_dtype == bfloat16:
-        return GGMLQuantizationType.BF16
-    elif tensor_dtype == np.float16:
+#    if tensor_dtype == bfloat16:
+#        return GGMLQuantizationType.BF16
+    if tensor_dtype == np.float16:
         return GGMLQuantizationType.F16
     elif tensor_dtype == np.float32:
         return GGMLQuantizationType.F32

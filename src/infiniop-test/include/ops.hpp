@@ -17,6 +17,28 @@ DECLARE_INFINIOP_TEST(causal_softmax)
 DECLARE_INFINIOP_TEST(rearrange)
 DECLARE_INFINIOP_TEST(sub)
 
+// T-1-1-2
+DECLARE_INFINIOP_TEST(silu)
+DECLARE_INFINIOP_TEST(div)
+DECLARE_INFINIOP_TEST(op_and)
+DECLARE_INFINIOP_TEST(op_or)
+DECLARE_INFINIOP_TEST(equal)
+DECLARE_INFINIOP_TEST(relu_backward)
+DECLARE_INFINIOP_TEST(gelu)
+DECLARE_INFINIOP_TEST(gelu_backward)
+DECLARE_INFINIOP_TEST(cross_entropy_loss_backward)
+
+// T-1-2-2
+DECLARE_INFINIOP_TEST(index_copy_inplace)
+DECLARE_INFINIOP_TEST(gather)
+DECLARE_INFINIOP_TEST(scatter)
+DECLARE_INFINIOP_TEST(tril)
+DECLARE_INFINIOP_TEST(triu)
+DECLARE_INFINIOP_TEST(linear)
+DECLARE_INFINIOP_TEST(linear_backward)
+
+
+
 #define REGISTER_INFINIOP_TEST(name)                      \
     {                                                     \
         #name,                                            \
@@ -43,6 +65,22 @@ DECLARE_INFINIOP_TEST(sub)
         REGISTER_INFINIOP_TEST(causal_softmax) \
         REGISTER_INFINIOP_TEST(rearrange)      \
         REGISTER_INFINIOP_TEST(sub)            \
+        REGISTER_INFINIOP_TEST(silu)                        \
+        REGISTER_INFINIOP_TEST(div)                         \
+        REGISTER_INFINIOP_TEST(op_and)                      \
+        REGISTER_INFINIOP_TEST(op_or)                       \
+        REGISTER_INFINIOP_TEST(equal)                       \
+        REGISTER_INFINIOP_TEST(relu_backward)               \
+        REGISTER_INFINIOP_TEST(gelu)                        \
+        REGISTER_INFINIOP_TEST(gelu_backward)               \
+        REGISTER_INFINIOP_TEST(cross_entropy_loss_backward) \
+        REGISTER_INFINIOP_TEST(index_copy_inplace)          \
+        REGISTER_INFINIOP_TEST(gather)                      \
+        REGISTER_INFINIOP_TEST(scatter)                     \
+        REGISTER_INFINIOP_TEST(tril)                        \
+        REGISTER_INFINIOP_TEST(triu)                        \
+        REGISTER_INFINIOP_TEST(linear)                      \
+        REGISTER_INFINIOP_TEST(linear_backward)             \
     }
 
 namespace infiniop_test {
