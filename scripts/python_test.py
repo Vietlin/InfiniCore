@@ -29,6 +29,7 @@ def run_tests(args):
         "scatter.py",
         "tril.py",
         "triu.py",
+        "linear.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True

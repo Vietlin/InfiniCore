@@ -22,5 +22,6 @@
 #include "infiniop/ops/scatter.h"
 #include "infiniop/ops/tril.h"
 #include "infiniop/ops/triu.h"
+#include "infiniop/ops/linear.h"
 
 #endif // __INFINIOP_API_H__
