@@ -26,6 +26,7 @@ def run_tests(args):
         # "swiglu.py",
         "reduce_max.py",
         "reduce_mean.py",
+        "batch_norm.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True

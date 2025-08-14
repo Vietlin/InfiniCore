@@ -19,5 +19,6 @@
 #include "infiniop/tensor_descriptor.h"
 #include "infiniop/ops/reduce_max.h"
 #include "infiniop/ops/reduce_mean.h"
+#include "infiniop/ops/batch_norm.h"
 
 #endif // __INFINIOP_API_H__

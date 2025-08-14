@@ -18,6 +18,7 @@ DECLARE_INFINIOP_TEST(rearrange)
 DECLARE_INFINIOP_TEST(sub)
 DECLARE_INFINIOP_TEST(reduce_max)
 DECLARE_INFINIOP_TEST(reduce_mean)
+DECLARE_INFINIOP_TEST(batch_norm)
 
 #define REGISTER_INFINIOP_TEST(name)                      \
     {                                                     \
@@ -47,6 +48,7 @@ DECLARE_INFINIOP_TEST(reduce_mean)
         REGISTER_INFINIOP_TEST(sub)            \
         REGISTER_INFINIOP_TEST(reduce_max)                  \
         REGISTER_INFINIOP_TEST(reduce_mean)                 \
+        REGISTER_INFINIOP_TEST(batch_norm)                  \
     }
 
 namespace infiniop_test {
