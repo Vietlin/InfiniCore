@@ -519,3 +519,32 @@ def index_copy_inplace_(lib):
     lib.infiniopDestroyIndexCopyInplaceDescriptor.restype = c_int32
     lib.infiniopDestroyIndexCopyInplaceDescriptor.argtypes = [infiniopOperatorDescriptor_t]
 
+@OpRegister.operator
+def gather_(lib):
+    lib.infiniopCreateGatherDescriptor.restype = c_int32
+    lib.infiniopCreateGatherDescriptor.argtypes = [
+        infiniopHandle_t,
+        POINTER(infiniopOperatorDescriptor_t),
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        c_size_t,
+    ]
+    lib.infiniopGetGatherWorkspaceSize.restype = c_int32
+    lib.infiniopGetGatherWorkspaceSize.argtypes = [
+        infiniopOperatorDescriptor_t,
+        POINTER(c_size_t),
+    ]    
+    lib.infiniopGather.restype = c_int32
+    lib.infiniopGather.argtypes = [
+        infiniopOperatorDescriptor_t,
+        c_void_p,
+        c_size_t,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+    ]
+    lib.infiniopDestroyGatherDescriptor.restype = c_int32
+    lib.infiniopDestroyGatherDescriptor.argtypes = [infiniopOperatorDescriptor_t]
+
