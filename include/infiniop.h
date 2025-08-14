@@ -20,5 +20,6 @@
 #include "infiniop/ops/index_copy_inplace.h"
 #include "infiniop/ops/gather.h"
 #include "infiniop/ops/scatter.h"
+#include "infiniop/ops/tril.h"
 
 #endif // __INFINIOP_API_H__

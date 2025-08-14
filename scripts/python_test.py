@@ -27,6 +27,7 @@ def run_tests(args):
         "index_copy_inplace.py",
         "gather.py",
         "scatter.py",
+        "tril.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True

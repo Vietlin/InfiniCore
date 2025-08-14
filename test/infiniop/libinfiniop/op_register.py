@@ -577,3 +577,30 @@ def scatter_(lib):
     lib.infiniopDestroyScatterDescriptor.restype = c_int32
     lib.infiniopDestroyScatterDescriptor.argtypes = [infiniopOperatorDescriptor_t]
 
+@OpRegister.operator
+def tril_(lib):
+    lib.infiniopCreateTrilDescriptor.restype = c_int32
+    lib.infiniopCreateTrilDescriptor.argtypes = [
+        infiniopHandle_t,
+        POINTER(infiniopOperatorDescriptor_t),
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        c_int32,
+    ]
+    lib.infiniopGetTrilWorkspaceSize.restype = c_int32
+    lib.infiniopGetTrilWorkspaceSize.argtypes = [
+        infiniopOperatorDescriptor_t,
+        POINTER(c_size_t),
+    ]    
+    lib.infiniopTril.restype = c_int32
+    lib.infiniopTril.argtypes = [
+        infiniopOperatorDescriptor_t,
+        c_void_p,
+        c_size_t,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+    ]
+    lib.infiniopDestroyTrilDescriptor.restype = c_int32
+    lib.infiniopDestroyTrilDescriptor.argtypes = [infiniopOperatorDescriptor_t]
+
