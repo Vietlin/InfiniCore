@@ -31,6 +31,7 @@ def run_tests(args):
         "equal.py",
         "relu_backward.py",
         "gelu.py",
+        "gelu_backward.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True
