@@ -544,3 +544,31 @@ def div_(lib):
     lib.infiniopDestroyDivDescriptor.restype = c_int32
     lib.infiniopDestroyDivDescriptor.argtypes = [infiniopOperatorDescriptor_t]
 
+@OpRegister.operator
+def and_(lib):
+    lib.infiniopCreateAndDescriptor.restype = c_int32
+    lib.infiniopCreateAndDescriptor.argtypes = [
+        infiniopHandle_t,
+        POINTER(infiniopOperatorDescriptor_t),
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+    ]
+    lib.infiniopGetAndWorkspaceSize.restype = c_int32
+    lib.infiniopGetAndWorkspaceSize.argtypes = [
+        infiniopOperatorDescriptor_t,
+        POINTER(c_size_t),
+    ]    
+    lib.infiniopAnd.restype = c_int32
+    lib.infiniopAnd.argtypes = [
+        infiniopOperatorDescriptor_t,
+        c_void_p,
+        c_size_t,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+    ]
+    lib.infiniopDestroyAndDescriptor.restype = c_int32
+    lib.infiniopDestroyAndDescriptor.argtypes = [infiniopOperatorDescriptor_t]
+
