@@ -28,6 +28,7 @@ def run_tests(args):
         "div.py",
         "and.py",
         "or.py",
+        "equal.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True

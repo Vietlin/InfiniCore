@@ -21,5 +21,6 @@
 #include "infiniop/ops/div.h"
 #include "infiniop/ops/and.h"
 #include "infiniop/ops/or.h"
+#include "infiniop/ops/equal.h"
 
 #endif // __INFINIOP_API_H__
