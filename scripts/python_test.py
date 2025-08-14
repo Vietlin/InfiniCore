@@ -30,6 +30,7 @@ def run_tests(args):
         "or.py",
         "equal.py",
         "relu_backward.py",
+        "gelu.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True
