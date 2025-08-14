@@ -23,5 +23,6 @@
 #include "infiniop/ops/batch_norm_backward.h"
 #include "infiniop/ops/layer_norm.h"
 #include "infiniop/ops/layer_norm_backward.h"
+#include "infiniop/ops/rms_norm_backward.h"
 
 #endif // __INFINIOP_API_H__

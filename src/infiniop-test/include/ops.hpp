@@ -22,6 +22,7 @@ DECLARE_INFINIOP_TEST(batch_norm)
 DECLARE_INFINIOP_TEST(batch_norm_backward)
 DECLARE_INFINIOP_TEST(layer_norm)
 DECLARE_INFINIOP_TEST(layer_norm_backward)
+DECLARE_INFINIOP_TEST(rms_norm_backward)
 
 #define REGISTER_INFINIOP_TEST(name)                      \
     {                                                     \
@@ -55,6 +56,7 @@ DECLARE_INFINIOP_TEST(layer_norm_backward)
         REGISTER_INFINIOP_TEST(batch_norm_backward)         \
         REGISTER_INFINIOP_TEST(layer_norm)                  \
         REGISTER_INFINIOP_TEST(layer_norm_backward)         \
+        REGISTER_INFINIOP_TEST(rms_norm_backward)           \
     }
 
 namespace infiniop_test {
