@@ -23,5 +23,6 @@
 #include "infiniop/ops/tril.h"
 #include "infiniop/ops/triu.h"
 #include "infiniop/ops/linear.h"
+#include "infiniop/ops/linear_backward.h"
 
 #endif // __INFINIOP_API_H__
