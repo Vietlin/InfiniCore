@@ -20,6 +20,7 @@ DECLARE_INFINIOP_TEST(reduce_max)
 DECLARE_INFINIOP_TEST(reduce_mean)
 DECLARE_INFINIOP_TEST(batch_norm)
 DECLARE_INFINIOP_TEST(batch_norm_backward)
+DECLARE_INFINIOP_TEST(layer_norm)
 
 #define REGISTER_INFINIOP_TEST(name)                      \
     {                                                     \
@@ -51,6 +52,7 @@ DECLARE_INFINIOP_TEST(batch_norm_backward)
         REGISTER_INFINIOP_TEST(reduce_mean)                 \
         REGISTER_INFINIOP_TEST(batch_norm)                  \
         REGISTER_INFINIOP_TEST(batch_norm_backward)         \
+        REGISTER_INFINIOP_TEST(layer_norm)                  \
     }
 
 namespace infiniop_test {

@@ -28,6 +28,7 @@ def run_tests(args):
         "reduce_mean.py",
         "batch_norm.py",
         "batch_norm_backward.py",
+        "layer_norm.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True
