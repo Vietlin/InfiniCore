@@ -572,3 +572,31 @@ def and_(lib):
     lib.infiniopDestroyAndDescriptor.restype = c_int32
     lib.infiniopDestroyAndDescriptor.argtypes = [infiniopOperatorDescriptor_t]
 
+@OpRegister.operator
+def or_(lib):
+    lib.infiniopCreateOrDescriptor.restype = c_int32
+    lib.infiniopCreateOrDescriptor.argtypes = [
+        infiniopHandle_t,
+        POINTER(infiniopOperatorDescriptor_t),
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+    ]
+    lib.infiniopGetOrWorkspaceSize.restype = c_int32
+    lib.infiniopGetOrWorkspaceSize.argtypes = [
+        infiniopOperatorDescriptor_t,
+        POINTER(c_size_t),
+    ]    
+    lib.infiniopOr.restype = c_int32
+    lib.infiniopOr.argtypes = [
+        infiniopOperatorDescriptor_t,
+        c_void_p,
+        c_size_t,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+    ]
+    lib.infiniopDestroyOrDescriptor.restype = c_int32
+    lib.infiniopDestroyOrDescriptor.argtypes = [infiniopOperatorDescriptor_t]
+

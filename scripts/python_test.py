@@ -27,6 +27,7 @@ def run_tests(args):
         "silu.py",
         "div.py",
         "and.py",
+        "or.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True

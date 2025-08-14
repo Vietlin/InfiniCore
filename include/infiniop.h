@@ -20,5 +20,6 @@
 #include "infiniop/ops/silu.h"
 #include "infiniop/ops/div.h"
 #include "infiniop/ops/and.h"
+#include "infiniop/ops/or.h"
 
 #endif // __INFINIOP_API_H__

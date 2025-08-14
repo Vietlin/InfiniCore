@@ -19,6 +19,7 @@ DECLARE_INFINIOP_TEST(sub)
 DECLARE_INFINIOP_TEST(silu)
 DECLARE_INFINIOP_TEST(div)
 DECLARE_INFINIOP_TEST(op_and)
+DECLARE_INFINIOP_TEST(op_or)
 
 #define REGISTER_INFINIOP_TEST(name)                      \
     {                                                     \
@@ -49,6 +50,7 @@ DECLARE_INFINIOP_TEST(op_and)
         REGISTER_INFINIOP_TEST(silu)                        \
         REGISTER_INFINIOP_TEST(div)                         \
         REGISTER_INFINIOP_TEST(op_and)                      \
+        REGISTER_INFINIOP_TEST(op_or)                       \
     }
 
 namespace infiniop_test {
