@@ -604,3 +604,30 @@ def tril_(lib):
     lib.infiniopDestroyTrilDescriptor.restype = c_int32
     lib.infiniopDestroyTrilDescriptor.argtypes = [infiniopOperatorDescriptor_t]
 
+@OpRegister.operator
+def triu_(lib):
+    lib.infiniopCreateTriuDescriptor.restype = c_int32
+    lib.infiniopCreateTriuDescriptor.argtypes = [
+        infiniopHandle_t,
+        POINTER(infiniopOperatorDescriptor_t),
+        infiniopTensorDescriptor_t,
+        infiniopTensorDescriptor_t,
+        c_int32,
+    ]
+    lib.infiniopGetTriuWorkspaceSize.restype = c_int32
+    lib.infiniopGetTriuWorkspaceSize.argtypes = [
+        infiniopOperatorDescriptor_t,
+        POINTER(c_size_t),
+    ]    
+    lib.infiniopTriu.restype = c_int32
+    lib.infiniopTriu.argtypes = [
+        infiniopOperatorDescriptor_t,
+        c_void_p,
+        c_size_t,
+        c_void_p,
+        c_void_p,
+        c_void_p,
+    ]
+    lib.infiniopDestroyTriuDescriptor.restype = c_int32
+    lib.infiniopDestroyTriuDescriptor.argtypes = [infiniopOperatorDescriptor_t]
+

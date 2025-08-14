@@ -28,6 +28,7 @@ def run_tests(args):
         "gather.py",
         "scatter.py",
         "tril.py",
+        "triu.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True

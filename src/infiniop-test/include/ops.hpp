@@ -20,6 +20,7 @@ DECLARE_INFINIOP_TEST(index_copy_inplace)
 DECLARE_INFINIOP_TEST(gather)
 DECLARE_INFINIOP_TEST(scatter)
 DECLARE_INFINIOP_TEST(tril)
+DECLARE_INFINIOP_TEST(triu)
 
 #define REGISTER_INFINIOP_TEST(name)                      \
     {                                                     \
@@ -51,6 +52,7 @@ DECLARE_INFINIOP_TEST(tril)
         REGISTER_INFINIOP_TEST(gather)                      \
         REGISTER_INFINIOP_TEST(scatter)                     \
         REGISTER_INFINIOP_TEST(tril)                        \
+        REGISTER_INFINIOP_TEST(triu)                        \
     }
 
 namespace infiniop_test {
