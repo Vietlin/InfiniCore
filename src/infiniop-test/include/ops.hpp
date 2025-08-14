@@ -17,6 +17,7 @@ DECLARE_INFINIOP_TEST(causal_softmax)
 DECLARE_INFINIOP_TEST(rearrange)
 DECLARE_INFINIOP_TEST(sub)
 DECLARE_INFINIOP_TEST(reduce_max)
+DECLARE_INFINIOP_TEST(reduce_mean)
 
 #define REGISTER_INFINIOP_TEST(name)                      \
     {                                                     \
@@ -45,6 +46,7 @@ DECLARE_INFINIOP_TEST(reduce_max)
         REGISTER_INFINIOP_TEST(rearrange)      \
         REGISTER_INFINIOP_TEST(sub)            \
         REGISTER_INFINIOP_TEST(reduce_max)                  \
+        REGISTER_INFINIOP_TEST(reduce_mean)                 \
     }
 
 namespace infiniop_test {
