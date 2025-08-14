@@ -22,5 +22,6 @@
 #include "infiniop/ops/and.h"
 #include "infiniop/ops/or.h"
 #include "infiniop/ops/equal.h"
+#include "infiniop/ops/relu_backward.h"
 
 #endif // __INFINIOP_API_H__

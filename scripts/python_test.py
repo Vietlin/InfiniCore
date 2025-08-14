@@ -29,6 +29,7 @@ def run_tests(args):
         "and.py",
         "or.py",
         "equal.py",
+        "relu_backward.py",
     ]:
         result = subprocess.run(
             f"python {test} {args} --debug", text=True, encoding="utf-8", shell=True
