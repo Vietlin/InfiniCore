@@ -147,7 +147,7 @@ def test(
     if PROFILE:
         # fmt: off
         profile_operation("PyTorch", lambda: torch_linear(
-            y.torch_tensor(), x.torch_tensor(), w.torch_tensor(), (b.torch_tensor() if bias_exist else None), bias_exist
+            x.torch_tensor(), w.torch_tensor(), (b.torch_tensor() if bias_exist else None), bias_exist
         ), device, NUM_PRERUN, NUM_ITERATIONS)
         profile_operation("    lib", lambda: lib_linear(), device, NUM_PRERUN, NUM_ITERATIONS)
         # fmt: on

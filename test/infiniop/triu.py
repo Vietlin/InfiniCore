@@ -164,7 +164,7 @@ def test(
     if PROFILE:
         # fmt: off
         profile_operation("PyTorch", lambda: torch_triu(
-            output, input, diagonal
+            output.torch_tensor(), input.torch_tensor(), diagonal
         ), device, NUM_PRERUN, NUM_ITERATIONS)
         profile_operation("    lib", lambda: lib_triu(), device, NUM_PRERUN, NUM_ITERATIONS)
         # fmt: on
