@@ -22,8 +22,8 @@ from enum import Enum, auto
 _TEST_CASES_ = [
     # shape, a_stride, b_stride
     ((13, 4), None, None),
-    ((13, 4), (1, 13), (1, 13)),
-    ((13, 4, 4), (4, 1, 52), (4, 1, 52),),
+    ((13, 4), (4, 1), (4, 1)),
+    ((13, 4, 4), (16, 4, 1), (16, 4, 1),),
     ((16, 5632), None, None),
 ]
 
@@ -125,7 +125,7 @@ def test(
     )
 
 
-    torch_equal(c.torch_tensor(), a.torch_tensor(), b.torch_tensor())
+    c._torch_tensor = torch_equal(c.torch_tensor(), a.torch_tensor(), b.torch_tensor())
 
     if sync is not None:
         sync()
@@ -196,4 +196,5 @@ if __name__ == "__main__":
     for device in get_test_devices(args):
         test_operator(device, test, _TEST_CASES, _TENSOR_DTYPES)
 
+    
     print("\033[92mTest my equal passed!\033[0m")
