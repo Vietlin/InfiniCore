@@ -51,8 +51,6 @@ _TOLERANCE_MAP = {
     InfiniDtype.F16: {"atol": 0, "rtol": 0},
     InfiniDtype.F32: {"atol": 0, "rtol": 0},
     InfiniDtype.BF16: {"atol": 0, "rtol": 0},
-    InfiniDtype.I32: {"atol": 0, "rtol": 0},
-    InfiniDtype.I64: {"atol": 0, "rtol": 0},
 }
 
 
