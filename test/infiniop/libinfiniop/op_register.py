@@ -361,8 +361,6 @@ def rope_(lib):
         infiniopTensorDescriptor_t,
         infiniopTensorDescriptor_t,
         infiniopTensorDescriptor_t,
-        infiniopTensorDescriptor_t,
-        c_int32,
     ]
 
     lib.infiniopGetRoPEWorkspaceSize.restype = c_int32
@@ -376,7 +374,6 @@ def rope_(lib):
         infiniopOperatorDescriptor_t,
         c_void_p,
         c_size_t,
-        c_void_p,
         c_void_p,
         c_void_p,
         c_void_p,
@@ -457,7 +454,6 @@ def swiglu_(lib):
         infiniopOperatorDescriptor_t,
     ]
 
-
 @OpRegister.operator
 def conv_(lib):
     lib.infiniopCreateConvDescriptor.restype = c_int32
@@ -494,89 +490,22 @@ def conv_(lib):
         infiniopOperatorDescriptor_t,
     ]
 
-
 @OpRegister.operator
-def topkrouter_(lib):
-    lib.infiniopCreateTopkrouterDescriptor.restype = c_int32
-    lib.infiniopCreateTopkrouterDescriptor.argtypes = [
+def silu_(lib):
+    lib.infiniopCreateSiluDescriptor.restype = c_int32
+    lib.infiniopCreateSiluDescriptor.argtypes = [
         infiniopHandle_t,
         POINTER(infiniopOperatorDescriptor_t),
         infiniopTensorDescriptor_t,
         infiniopTensorDescriptor_t,
     ]
-
-    lib.infiniopGetTopkrouterWorkspaceSize.restype = c_int32
-    lib.infiniopGetTopkrouterWorkspaceSize.argtypes = [
+    lib.infiniopGetSiluWorkspaceSize.restype = c_int32
+    lib.infiniopGetSiluWorkspaceSize.argtypes = [
         infiniopOperatorDescriptor_t,
         POINTER(c_size_t),
-    ]
-
-    lib.infiniopTopkrouter.restype = c_int32
-    lib.infiniopTopkrouter.argtypes = [
-        infiniopOperatorDescriptor_t,
-        c_void_p,
-        c_size_t,
-        c_void_p,
-        c_void_p,
-        c_void_p,
-        c_void_p,
-        c_float,
-        c_size_t,
-        c_void_p,
-    ]
-
-    lib.infiniopDestroyTopkrouterDescriptor.restype = c_int32
-    lib.infiniopDestroyTopkrouterDescriptor.argtypes = [
-        infiniopOperatorDescriptor_t,
-    ]
-
-
-@OpRegister.operator
-def dequantize_(lib):
-    lib.infiniopCreateDequantizeDescriptor.restype = c_int32
-    lib.infiniopCreateDequantizeDescriptor.argtypes = [
-        infiniopHandle_t,
-        POINTER(infiniopOperatorDescriptor_t),
-        infiniopTensorDescriptor_t,
-        infiniopTensorDescriptor_t,
-        infiniopTensorDescriptor_t,
-        infiniopTensorDescriptor_t,
-    ]
-    lib.infiniopGetDequantizeWorkspaceSize.restype = c_int32
-    lib.infiniopGetDequantizeWorkspaceSize.argtypes = [
-        infiniopOperatorDescriptor_t,
-        POINTER(c_size_t),
-    ]
-    lib.infiniopDequantize.restype = c_int32
-    lib.infiniopDequantize.argtypes = [
-        infiniopOperatorDescriptor_t,
-        c_void_p,
-        c_size_t,
-        c_void_p,
-        c_void_p,
-        c_void_p,
-        c_size_t,
-        c_size_t,
-        c_size_t,
-        c_void_p,
-    ]
-    lib.infiniopDestroyDequantizeDescriptor.restype = c_int32
-    lib.infiniopDestroyDequantizeDescriptor.argtypes = [
-        infiniopOperatorDescriptor_t,
-    ]
-
-
-@OpRegister.operator
-def softplus_(lib):
-    lib.infiniopCreateSoftplusDescriptor.restype = c_int32
-    lib.infiniopCreateSoftplusDescriptor.argtypes = [
-        infiniopHandle_t,
-        POINTER(infiniopOperatorDescriptor_t),
-        infiniopTensorDescriptor_t,
-        infiniopTensorDescriptor_t,
-    ]
-    lib.infiniopSoftplus.restype = c_int32
-    lib.infiniopSoftplus.argtypes = [
+    ]    
+    lib.infiniopSilu.restype = c_int32
+    lib.infiniopSilu.argtypes = [
         infiniopOperatorDescriptor_t,
         c_void_p,
         c_size_t,
@@ -584,5 +513,6 @@ def softplus_(lib):
         c_void_p,
         c_void_p,
     ]
-    lib.infiniopDestroySoftplusDescriptor.restype = c_int32
-    lib.infiniopDestroySoftplusDescriptor.argtypes = [infiniopOperatorDescriptor_t]
+    lib.infiniopDestroySiluDescriptor.restype = c_int32
+    lib.infiniopDestroySiluDescriptor.argtypes = [infiniopOperatorDescriptor_t]
+
