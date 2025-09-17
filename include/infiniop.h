@@ -20,5 +20,15 @@
 #include "infiniop/ops/swiglu.h"
 #include "infiniop/ops/topkrouter.h"
 #include "infiniop/tensor_descriptor.h"
+#include "infiniop/ops/equal.h"
+#include "infiniop/ops/batch_norm.h"
+#include "infiniop/ops/batch_norm_backward.h"
+#include "infiniop/ops/layer_norm.h"
+#include "infiniop/ops/layer_norm_backward.h"
+#include "infiniop/ops/rms_norm_backward.h"
+#include "infiniop/ops/index_copy_inplace.h"
+#include "infiniop/ops/gather.h"
+#include "infiniop/ops/scatter.h"
+#include "infiniop/ops/linear_backward.h"
 
 #endif // __INFINIOP_API_H__

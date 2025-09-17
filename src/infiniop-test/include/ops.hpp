@@ -16,6 +16,16 @@ DECLARE_INFINIOP_TEST(add)
 DECLARE_INFINIOP_TEST(causal_softmax)
 DECLARE_INFINIOP_TEST(rearrange)
 DECLARE_INFINIOP_TEST(sub)
+DECLARE_INFINIOP_TEST(equal)
+DECLARE_INFINIOP_TEST(batch_norm)
+DECLARE_INFINIOP_TEST(batch_norm_backward)
+DECLARE_INFINIOP_TEST(layer_norm)
+DECLARE_INFINIOP_TEST(layer_norm_backward)
+DECLARE_INFINIOP_TEST(rms_norm_backward)
+DECLARE_INFINIOP_TEST(index_copy_inplace)
+DECLARE_INFINIOP_TEST(gather)
+DECLARE_INFINIOP_TEST(scatter)
+DECLARE_INFINIOP_TEST(linear_backward)
 
 #define REGISTER_INFINIOP_TEST(name)                      \
     {                                                     \
@@ -43,6 +53,16 @@ DECLARE_INFINIOP_TEST(sub)
         REGISTER_INFINIOP_TEST(causal_softmax) \
         REGISTER_INFINIOP_TEST(rearrange)      \
         REGISTER_INFINIOP_TEST(sub)            \
+        REGISTER_INFINIOP_TEST(equal)                       \
+        REGISTER_INFINIOP_TEST(batch_norm)                  \
+        REGISTER_INFINIOP_TEST(batch_norm_backward)         \
+        REGISTER_INFINIOP_TEST(layer_norm)                  \
+        REGISTER_INFINIOP_TEST(layer_norm_backward)         \
+        REGISTER_INFINIOP_TEST(rms_norm_backward)           \
+        REGISTER_INFINIOP_TEST(index_copy_inplace)          \
+        REGISTER_INFINIOP_TEST(gather)                      \
+        REGISTER_INFINIOP_TEST(scatter)                     \
+        REGISTER_INFINIOP_TEST(linear_backward)             \
     }
 
 namespace infiniop_test {
